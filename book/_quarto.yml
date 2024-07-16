@@ -1,6 +1,6 @@
 project:
-  type: book
-  output-dir: ../output
+  type: website
+  output-dir: ../docs
 
 bibliography: assets/references.bib
 crossref:

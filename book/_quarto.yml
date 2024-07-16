@@ -1,5 +1,5 @@
 project:
-  type: website
+  type: book
   output-dir: ../docs
 
 bibliography: assets/references.bib
@@ -27,27 +27,27 @@ book:
     - chapters/appendices.qmd
     - chapters/bibliography.qmd
 
-# format:
-#   unitn-thesis-pdf:
-#     bachelors: Computer Science
-#     year: 2021/2022
-#     supervisor: Fabrizio Granelli
-#     keep-tex: false
-#     # Font options
-#     mainfont: TeX Gyre Pagella
-#     # Figures
-#     default-image-extension: pdf
-#     float-fix: true
-#     fig-align: center
-#     fig-pos: "h!"
-#     # Code block options
-#     code-line-numbers: true
-#     highlight-style: assets/monochrome-bold.theme
-#     # Indent paragraphs instead of adding space between them
-#     indent: true
-#   html:
-#     default-image-extension: png
-#     theme: cosmo
+format:
+  # unitn-thesis-pdf:
+  #   bachelors: Computer Science
+  #   year: 2021/2022
+  #   supervisor: Fabrizio Granelli
+  #   keep-tex: false
+  #   # Font options
+  #   mainfont: TeX Gyre Pagella
+  #   # Figures
+  #   default-image-extension: pdf
+  #   float-fix: true
+  #   fig-align: center
+  #   fig-pos: "h!"
+  #   # Code block options
+  #   code-line-numbers: true
+  #   highlight-style: assets/monochrome-bold.theme
+  #   # Indent paragraphs instead of adding space between them
+  #   indent: true
+  html:
+    default-image-extension: png
+    theme: cosmo
 
 filters:
   - custom-appendices

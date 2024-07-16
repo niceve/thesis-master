@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>data-collection-and-analysis</title>
+<title>OpenRFSense - Explorative data analysis using software-defined radios - 5&nbsp; Data collection and analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -43,11 +43,14 @@ div.csl-indent {
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../chapters/conclusion-and-future-work.html" rel="next">
+<link href="../chapters/user-interface.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -80,39 +83,135 @@ div.csl-indent {
 
 </head>
 
-<body>
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/data-collection-and-analysis.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Data collection and analysis</span></a></li></ol></nav>
+      <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">OpenRFSense - Explorative data analysis using software-defined radios</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Abstract</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/system-architecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">System architecture</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/service-messaging.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Service messaging</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/user-interface.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">User interface</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/data-collection-and-analysis.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Data collection and analysis</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/conclusion-and-future-work.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Conclusion and future work</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/appendices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Appendices</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/bibliography.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bibliography</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#data-collection-and-analysis" id="toc-data-collection-and-analysis" class="nav-link active" data-scroll-target="#data-collection-and-analysis"><span class="header-section-number">1</span> Data collection and analysis</a>
-  <ul class="collapse">
-  <li><a href="#data-acquisition" id="toc-data-acquisition" class="nav-link" data-scroll-target="#data-acquisition"><span class="header-section-number">1.1</span> Data acquisition</a></li>
-  <li><a href="#sec-signalProcessing" id="toc-sec-signalProcessing" class="nav-link" data-scroll-target="#sec-signalProcessing"><span class="header-section-number">1.2</span> Signal processing</a></li>
-  <li><a href="#data-streaming" id="toc-data-streaming" class="nav-link" data-scroll-target="#data-streaming"><span class="header-section-number">1.3</span> Data streaming</a></li>
-  <li><a href="#data-storage" id="toc-data-storage" class="nav-link" data-scroll-target="#data-storage"><span class="header-section-number">1.4</span> Data storage</a></li>
-  <li><a href="#analysis-of-spectrum-data" id="toc-analysis-of-spectrum-data" class="nav-link" data-scroll-target="#analysis-of-spectrum-data"><span class="header-section-number">1.5</span> Analysis of spectrum data</a></li>
-  </ul></li>
+  <li><a href="#data-acquisition" id="toc-data-acquisition" class="nav-link active" data-scroll-target="#data-acquisition"><span class="header-section-number">5.1</span> Data acquisition</a></li>
+  <li><a href="#sec-signalProcessing" id="toc-sec-signalProcessing" class="nav-link" data-scroll-target="#sec-signalProcessing"><span class="header-section-number">5.2</span> Signal processing</a></li>
+  <li><a href="#data-streaming" id="toc-data-streaming" class="nav-link" data-scroll-target="#data-streaming"><span class="header-section-number">5.3</span> Data streaming</a></li>
+  <li><a href="#data-storage" id="toc-data-storage" class="nav-link" data-scroll-target="#data-storage"><span class="header-section-number">5.4</span> Data storage</a></li>
+  <li><a href="#analysis-of-spectrum-data" id="toc-analysis-of-spectrum-data" class="nav-link" data-scroll-target="#analysis-of-spectrum-data"><span class="header-section-number">5.5</span> Analysis of spectrum data</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Data collection and analysis</span></h1>
+</div>
 
 
-<section id="data-collection-and-analysis" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Data collection and analysis</h1>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
 <p>Data collection is at the core of the OpenRFSense project and, as such, requires some complex and specialized components. Overall, the data collection procedure can be better explained as an ordered pipeline, which starts from the remote node.</p>
-<section id="data-acquisition" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="data-acquisition"><span class="header-section-number">1.1</span> Data acquisition</h2>
+<section id="data-acquisition" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="data-acquisition"><span class="header-section-number">5.1</span> Data acquisition</h2>
 <p>The node software utilizes a set of low-level hardware APIs to interface with the SDR receiver(s) and collect the RF signals. The main data collection routine is handled by a customized version of a pre-existing Electrosense software, which interfaces with connected SDR devices and streams data towards an external destination.</p>
 <p>The data is collected in one of two forms:</p>
 <ul>
@@ -120,38 +219,38 @@ div.csl-indent {
 <li>spectral density averaged over an arbitrary number of seconds using Fast Fourier Transform (FFT)</li>
 </ul>
 </section>
-<section id="sec-signalProcessing" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="sec-signalProcessing"><span class="header-section-number">1.2</span> Signal processing</h2>
+<section id="sec-signalProcessing" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="sec-signalProcessing"><span class="header-section-number">5.2</span> Signal processing</h2>
 <p>The signal processing component is responsible for cleaning up the collected RF signals and extracting the relevant features for analysis. The component utilizes a set of algorithms to filter out noise and interference from the collected signals. Once the signals are cleaned up, the component extracts relevant features such as the signal strength, modulation type, and frequency. At the time of writing, the following signal encodings can be preprocessed:</p>
 <ul>
 <li>Aircraft Communications Addressing and Reporting System (ACARS)</li>
 <li>LTE, both User Equipment-to-cell and cell-to-User Equipment</li>
-<li>Mode S <span class="citation" data-cites="internationalcivilaviationorganizationManualModeSpecific2004">(<a href="#ref-internationalcivilaviationorganizationManualModeSpecific2004" role="doc-biblioref">Organization 2004</a>)</span> collision avoidance messages</li>
+<li>Mode S <span class="citation" data-cites="internationalcivilaviationorganizationManualModeSpecific2004">(<a href="bibliography.html#ref-internationalcivilaviationorganizationManualModeSpecific2004" role="doc-biblioref">Organization 2004</a>)</span> collision avoidance messages</li>
 <li>Aeronautical Information Service (AIS) air traffic information</li>
 <li>AM/FM radio</li>
 </ul>
 </section>
-<section id="data-streaming" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="data-streaming"><span class="header-section-number">1.3</span> Data streaming</h2>
-<p>The processed data is serialized in a JSON-based binary format (Apache Avro <span class="citation" data-cites="ApacheAvroDocumentation">(<a href="#ref-ApacheAvroDocumentation" role="doc-biblioref"><span>“Apache <span>Avro Documentation</span>,”</span> n.d.</a>)</span>), together with extra metadata such as:</p>
+<section id="data-streaming" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="data-streaming"><span class="header-section-number">5.3</span> Data streaming</h2>
+<p>The processed data is serialized in a JSON-based binary format (Apache Avro <span class="citation" data-cites="ApacheAvroDocumentation">(<a href="bibliography.html#ref-ApacheAvroDocumentation" role="doc-biblioref"><span>“Apache <span>Avro Documentation</span>,”</span> n.d.</a>)</span>), together with extra metadata such as:</p>
 <ul>
 <li>time of recording</li>
 <li>node hardware identifier and campaign identifier code</li>
 <li>sensor hardware configuration (center frequency, antenna gain, estimated noise floor, etc.)</li>
 </ul>
-<p>The encoded packets are then sent over the Internet to the backend service through several raw TCP connections per receiver to maximize flow. Surprisingly, even low-cost modern SDR receivers tend to output large quantities of data (usually in the order of several megabytes per second). This requires the usage of clever throughput maximization algorithms such as TCP Fast Open <span class="citation" data-cites="radhakrishnanTCPFastOpen2011">(<a href="#ref-radhakrishnanTCPFastOpen2011" role="doc-biblioref">Radhakrishnan et al. 2011</a>)</span> and <code>SO_REUSEPORT</code>.</p>
+<p>The encoded packets are then sent over the Internet to the backend service through several raw TCP connections per receiver to maximize flow. Surprisingly, even low-cost modern SDR receivers tend to output large quantities of data (usually in the order of several megabytes per second). This requires the usage of clever throughput maximization algorithms such as TCP Fast Open <span class="citation" data-cites="radhakrishnanTCPFastOpen2011">(<a href="bibliography.html#ref-radhakrishnanTCPFastOpen2011" role="doc-biblioref">Radhakrishnan et al. 2011</a>)</span> and <code>SO_REUSEPORT</code>.</p>
 </section>
-<section id="data-storage" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="data-storage"><span class="header-section-number">1.4</span> Data storage</h2>
-<p>The cleaned up and feature-extracted data is received by the backend and partially deserialized to extract the node hardware identifier and campaign identifier code, which are used to derive a unique key for that packet to be used in storage. The binary-encoded data is then stored in a database embedded in the backend for later analysis. The data is written to disk in a structured format that allows for fast querying and analysis. The storage software component is explained in more detail in <strong>?@sec-signalStorage</strong>.</p>
+<section id="data-storage" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="data-storage"><span class="header-section-number">5.4</span> Data storage</h2>
+<p>The cleaned up and feature-extracted data is received by the backend and partially deserialized to extract the node hardware identifier and campaign identifier code, which are used to derive a unique key for that packet to be used in storage. The binary-encoded data is then stored in a database embedded in the backend for later analysis. The data is written to disk in a structured format that allows for fast querying and analysis. The storage software component is explained in more detail in <a href="system-architecture.html#sec-signalStorage"><span>Section&nbsp;2.2.2</span></a>.</p>
 </section>
-<section id="analysis-of-spectrum-data" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="analysis-of-spectrum-data"><span class="header-section-number">1.5</span> Analysis of spectrum data</h2>
+<section id="analysis-of-spectrum-data" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="analysis-of-spectrum-data"><span class="header-section-number">5.5</span> Analysis of spectrum data</h2>
 <p>To analyze the collected spectrum data, several techniques can be employed. One approach is to use statistical methods to identify patterns or anomalies in the data. For example, signal strength and frequency distribution can be analyzed to detect unusual patterns, which may indicate the presence of interference sources. Another approach is to use machine learning algorithms to automatically classify different types of signals based on their frequency, bandwidth, and modulation. This can help to identify different types of signals, such as WiFi, Bluetooth, or cellular signals, and to detect any new or unknown signals.</p>
 <p>Overall, the collected spectrum data is a valuable resource for a wide range of applications. The different techniques for analyzing the data can provide useful insights into the electromagnetic environment, giving users easy access to dense and reasonably accurate research samples.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
 <div id="ref-ApacheAvroDocumentation" class="csl-entry" role="listitem">
 <span>“Apache <span>Avro Documentation</span>.”</span> n.d. <span>Apache Avro</span>. <a href="https://avro.apache.org/docs/">https://avro.apache.org/docs/</a>.
 </div>
@@ -162,7 +261,6 @@ Organization, International Civil Aviation, ed. 2004. <em>Manual on Mode <span>S
 Radhakrishnan, Sivasankar, Yuchung Cheng, Jerry Chu, Arvind Jain, and Barath Raghavan. 2011. <span>“<span>TCP</span> Fast Open.”</span> In <em>Proceedings of the <span>Seventh COnference</span> on Emerging <span>Networking EXperiments</span> and <span>Technologies</span></em>, 1–12. <span>Tokyo Japan</span>: <span>ACM</span>. <a href="https://doi.org/10.1145/2079296.2079317">https://doi.org/10.1145/2079296.2079317</a>.
 </div>
 </div>
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -399,6 +497,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/user-interface.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">User interface</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/conclusion-and-future-work.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Conclusion and future work</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 

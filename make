@@ -8,6 +8,7 @@ bin_dir="$makesh_script_dir/bin"
 output_dir="$makesh_script_dir/output"
 book_dir="$makesh_script_dir/book"
 slides_dir="$makesh_script_dir/slides"
+docs_dir="$makesh_script_dir/docs"
 
 quarto_version="1.3.242"
 quarto="$bin_dir/quarto/bin/quarto"
@@ -78,7 +79,9 @@ make::book_html() {
 
 
 make::book_htmlx() {
-  $quarto publish "$book_dir"
+  pushd "$book_dir"
+  $quarto publish
+  popd
 }
 
 

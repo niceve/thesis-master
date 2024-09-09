@@ -13,9 +13,9 @@ number-sections: true
 toc: true
 
 book:
-  title: OpenRFSense - Explorative data analysis using software-defined radios
-  author: Leonardo Baldin
-  date: 2023-03-15
+  title: Extracting Personal Attributes from Product Reviews
+  author: Nina Verbeeke
+  date: 2024-09-24
   chapters:
     - index.qmd
     - chapters/introduction.qmd
@@ -30,7 +30,7 @@ book:
 format:
   unitn-thesis-pdf:
     bachelors: Computer Science
-    year: 2021/2022
+    year: 2023/2024
     supervisor: Fabrizio Granelli
     keep-tex: false
     # Font options

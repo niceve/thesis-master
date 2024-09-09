@@ -1,0 +1,7 @@
+/bin/
+/.quarto/
+/output/
+
+/.luarc.json
+
+bin

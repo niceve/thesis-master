@@ -1,4 +1,5 @@
 # Introduction
+Dit is intro
 The collection and analysis of data samples from the radio frequency spectrum has always required considerable effort, even with partial automation, due to the inherent complexity and density of such data. Furthermore, complex systems based on analogic circuits were needed to process radio signals. This used to entail large investments in both manpower and capital at any scale, making spectrum analysis infeasible for hobbyists.
 
 This thesis will elaborate on the potential of SDR technology and the value of open source software in advancing the field of radio communication systems.

@@ -1,0 +1,1500 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode,hidelinks}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  letterpaper,
+  a4paper,
+  12pt,
+  titlepage,
+  oneside,
+  openany]{book}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\setlength{\parskip}{0pt}
+\usepackage{xcolor}
+
+\usepackage[paperheight = 29.7cm,paperwidth = 21cm,outer = 1.5cm,inner =
+2.5cm,top = 2cm,bottom = 2cm]{geometry}
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{5}
+
+
+\pagestyle{plain}
+
+%%% This section was taken from `https://aty.sdsu.edu/bibliog/latex/floats.html`
+% Alter some LaTeX defaults for better treatment of figures:
+% See p.105 of "TeX Unbound" for suggested values.
+% See pp. 199-200 of Lamport's "LaTeX" book for details.
+%   General parameters, for ALL pages:
+\renewcommand{\topfraction}{0.9}	% max fraction of floats at top
+\renewcommand{\bottomfraction}{0.8}	% max fraction of floats at bottom
+%   Parameters for TEXT pages (not float pages):
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}     % 2 may work better
+\setcounter{dbltopnumber}{2}    % for 2-column pages
+\renewcommand{\dbltopfraction}{0.9}	% fit big float above 2-col. text
+\renewcommand{\textfraction}{0.07}	% allow minimal text w. figs
+%   Parameters for FLOAT pages (not text pages):
+\renewcommand{\floatpagefraction}{0.7}	% require fuller float pages
+% N.B.: floatpagefraction MUST be less than topfraction !!
+\renewcommand{\dblfloatpagefraction}{0.7}	% require fuller float pages
+
+
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{255,255,255}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{\textit{#1}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{\textit{#1}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{\textit{#1}}}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
+  \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+% Additional required packages
+\usepackage{plain}
+\usepackage{setspace}
+\usepackage{titlesec}
+
+% Remove empty vertical space around quotes
+\renewcommand{\quote}{\list{}{\rightmargin=\leftmargin\topsep=0pt}\item\relax}
+
+% Define a changemargin block
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist
+% Change margin for the Shaded environment
+\renewenvironment{Shaded}{
+\begin{changemargin}{1cm}{1cm}
+  \begin{snugshade}
+}{
+  \end{snugshade}
+\end{changemargin}
+}
+% Change line number size
+\renewcommand{\theFancyVerbLine}{\small\arabic{FancyVerbLine}}
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\makeatother
+
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{english}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{csquotes}
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={OpenRFSense - Explorative data analysis using software-defined radios},
+  pdfauthor={Leonardo Baldin},
+  pdflang={en},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\title{OpenRFSense - Explorative data analysis using software-defined
+radios}
+\author{Leonardo Baldin}
+\date{2023-03-15}
+
+\begin{document}
+\frontmatter
+
+\thispagestyle{empty}
+
+\begin{titlepage}
+  \begin{center}
+    \begin{figure}[h!]
+      \centerline{\includegraphics[width=0.6\textwidth]{\_extensions/unitn-thesis/assets/marchio.pdf}}
+    \end{figure}
+
+    \vspace{2 cm}
+
+    \LARGE{Department of Information Engineering and Computer Science\\}
+
+    \vspace{1 cm}
+    \Large{Bachelor's Degree in\\
+      Computer Science
+    }
+
+    \vspace{2 cm}
+    \Large\textsc{Final Dissertation\\}
+    \vspace{1 cm}
+    \Huge\textsc{OpenRFSense - Explorative data analysis using
+software-defined radios\\}
+    
+
+    \vspace{2 cm}
+    \begin{tabular*}{\textwidth}{ c @{\extracolsep{\fill}} c }
+    \Large{Supervisor} & \Large{Student}\\
+    \Large{Fabrizio Granelli}& \Large{Leonardo Baldin}\\
+    \end{tabular*}
+
+    \vspace{2 cm}
+
+    \Large{Academic year 2021/2022}
+  \end{center}
+\end{titlepage}
+
+\addtocounter{page}{-1}
+
+\mainmatter
+\renewcommand*\contentsname{Table of contents}
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\clearpage
+
+\begingroup
+  % Save the \chapter command before patching
+  \let\OldChapter\chapter
+  % Patch the \chapter command to not create a new page
+  \makeatletter
+  \patchcmd\chapter
+    {\if@openright\cleardoublepage\else\clearpage\fi}
+    {\par}
+    {}{}
+  \makeatother
+  % Restore the command behavior when \appendix is called
+  \preto\appendix
+    {\renewcommand{\chapter}{\OldChapter}}
+    {}{}
+
+  \titleformat{\chapter}
+    {\normalfont\Huge\bfseries}{\thechapter}{1em}{}
+
+  \titlespacing*{\chapter}{0pt}{1.5cm}{0.05cm}
+  \titlespacing*{\section}{0pt}{0.5cm}{0.05cm}
+  \titlespacing*{\subsection}{0pt}{0.25cm}{0.05cm}
+\bookmarksetup{startatroot}
+
+\hypertarget{abstract}{%
+\chapter*{Abstract}\label{abstract}}
+\addcontentsline{toc}{chapter}{Abstract}
+
+\markboth{Abstract}{Abstract}
+
+Placeholder for the abstract.
+
+\bookmarksetup{startatroot}
+
+\hypertarget{introduction}{%
+\chapter{Introduction}\label{introduction}}
+
+\begin{figure}[h!]
+
+{\centering \includegraphics[width=0.8\textwidth,height=\textheight]{assets/SchemaExtract2.gif}
+
+}
+
+\caption{SchemaExtract}
+
+\end{figure}
+
+\hypertarget{background}{%
+\section{Background}\label{background}}
+
+Truly understanding customers is key to a successful business. Companies
+increasingly leverage data analytics to uncover insights into their
+customers' needs, preferences, and socio-demographic profiles. This
+information is essential for enhancing user experiences, differentiating
+from competitors, and creating products that satisfy market demands.
+Moreover, understanding customers improves strategic planning by
+facilitating informed decisions about market positioning, pricing, and
+promotional strategies. By aligning marketing strategies with consumer
+needs, businesses can achieve more successful and impactful outcomes.
+
+Traditional approaches to understanding customers, such as surveys,
+focus groups, and market research reports, have long been relied upon.
+While these methods can provide useful insights, they have significant
+limitations. Surveys, for instance, often suffer from low response rates
+and biased results. Focus groups may not accurately represent the entire
+customer base, leading to incomplete or skewed findings. Market research
+reports, while detailed, are frequently expensive and time-consuming to
+produce. Additionally, these traditional methods typically provide only
+a static view of customer preferences, failing to capture the dynamic
+changes in consumer behavior over time.
+
+To address these limitations, businesses are increasingly turning to
+more innovative approaches. One such approach is the analysis of
+customer-generated content, such as product reviews. Product reviews
+offer valuable insights into customer preferences and sentiments.
+Various techniques, including sentiment analysis, topic modeling, and
+natural language processing, can be employed to extract meaningful
+information from this user-generated content.
+
+\hypertarget{research-objectives}{%
+\section{Research Objectives}\label{research-objectives}}
+
+Traditionally, product reviews have been analyzed primarily on feedback
+about the product, such as customer opinions, satisfaction levels, and
+sentiments on specific features. However, insights into customers'
+personal attributes, behaviors, and usage contexts have not been
+thoroughly explored. Addressing this gap presents a valuable opportunity
+to leverage user-generated content for a deeper understanding of
+customers.
+
+The extraction of personal attributes from product reviews is the focus
+of this research. Personal attributes are specific characteristics that
+uniquely describe an individual's traits, lifestyle, and circumstances,
+such as physical appearance, profession, household composition, and
+living situation. These attributes could include details such as hair
+type, skin condition, profession, number of family members or pets, and
+whether they live in an apartment, townhouse or single-family home. By
+extracting personal attributes from product reviews, we aim to gain a
+deeper understanding of the characteristics of customers.
+
+\hypertarget{related-work}{%
+\section{Related work}\label{related-work}}
+
+Recent research has explored methods for extracting personal attributes
+from unstructured text. A significant portion of this work has been
+specifically focused on dialogues. Wang et al.~(2022) explored the use
+of a language model to extract and infer personal attributes from
+human-human dialogue. DeLucia et al.~(2024) presented a method for
+adapting persona extraction models to diverse conversational settings,
+enhancing the quality of persona information extracted from dialogues
+and reducing the need for extensive human annotation. Wu et al.~(2024)
+introduced In-Dialogue Learning, a framework that enhances pre-trained
+language models to utilize dialogue history for persona extraction in
+personalized dialogue generation
+
+All aforementioned studies employ triplet format. This means the format
+(s, r, o), where the relation (r) indicates the persona attribute type
+of the subject (s) towards the object (o). The benefits of triplet
+format are 1, 2, and 3.
+
+Despite their promising results, these studies have limitations. They
+rely on predefined lists of attributes, which constrain their ability to
+capture a broad range of relevant information and limit flexibility. In
+addition, models need to be fine-tuned to address these constraints,
+especially when applied to product reviews. There is a need for data to
+finetune.
+
+\hypertarget{approach}{%
+\section{Approach}\label{approach}}
+
+In line with previous research on extracting personal attributes, this
+study will also use the triplet format to store these attributes.
+However, our approach diverges by addressing some of the key limitations
+of earlier studies, including that previous research often relied on
+predefined lists of attributes. Inspired by recent advancements in
+pre-trained large language models (LLMs), this work introduces a novel
+approach for extracting personal attributes using these models. Our
+method aims to extract triplets from product reviews without being
+limited by predefined attribute categories, thus offering a more
+comprehensive and adaptable solution to capture the various personal
+attributes revealed in customer feedback.
+
+We present an end-to-end pipeline, starting from raw text all the way
+through to a constructed knowledge graph. The approach , text
+pre-processing, triplet extraction post-processing.
+
+\hypertarget{main-contributions}{%
+\section{Main Contributions}\label{main-contributions}}
+
+The main contributions of this thesis are as follows: * Pipeline: We
+developed an end-to-end pipeline that leverages large language models
+(LLMs) to automate the construction of Knowledge Graphs from
+unstructured data. * Comparison: We provided a comparison between our
+LLM-based approach and traditional triplet extraction methods. * Case
+Study Implementation: We conducted a detailed case study to evaluate the
+performance of our framework. * Future Direction: We identified
+potential areas for future research and development, offering insights
+into how the end-to-end pipeline can be further improved and extended.
+
+\hypertarget{thesis-outline}{%
+\section{Thesis Outline}\label{thesis-outline}}
+
+Placeholder for thesis outline
+
+\bookmarksetup{startatroot}
+
+\hypertarget{system-architecture}{%
+\chapter{System architecture}\label{system-architecture}}
+
+Several different software components are required to ensure the system
+can:
+
+\begin{itemize}
+\tightlist
+\item
+  persist general data on disk, such as node telemetry and hardware
+  information
+\item
+  receive and store large volumes of radio signal samples organized in
+  \enquote{campaigns}
+\item
+  maintain a reliable and fault-tolerant connection between the backend
+  and an unknown number of nodes
+\end{itemize}
+
+The currently implemented software architecture is summarized in
+Figure~\ref{fig-systemArch}.
+
+\begin{figure}[h!]
+
+{\centering \includegraphics[width=\textwidth,height=0.4\textheight]{index_files/mediabag/28a0707630a26b7937bb55ffeebfc4d2a7a67a2a.pdf}
+
+}
+
+\caption{\label{fig-systemArch}high-level system architecture}
+
+\end{figure}
+
+\hypertarget{high-level-components}{%
+\section{High-level components}\label{high-level-components}}
+
+OpenRFSense is built upon several different modern technologies,
+interconnected by mainstream networking protocols.
+
+\hypertarget{hardware}{%
+\subsection{Hardware}\label{hardware}}
+
+OpenRFSense is designed to run on a variety of hardware platforms,
+including PCs, servers, and embedded systems. The hardware requirements
+depend on the specific use case and workload, but typically include a
+multi-core processor, sufficient memory and storage, and one or more
+software-defined radio (SDR) devices acting as signal receivers.
+
+\hypertarget{software-defined-radio}{%
+\subsection{Software-defined radio}\label{software-defined-radio}}
+
+OpenRFSense relies on one or more SDR devices to capture and analyze
+radio frequency signals. The SDR devices are connected to the hardware
+platform via USB or PCIe interfaces and can be controlled using
+open-source software libraries such as GNU Radio. The SDR device is
+responsible for capturing radio signals from the environment.
+
+\hypertarget{operating-system}{%
+\subsection{Operating system}\label{operating-system}}
+
+Thanks to the choice of programming language (Golang
+\protect\hyperlink{ref-GoProgrammingLanguage}{{[}1{]}}), both the
+backend and node software can be compiled and deployed on most modern
+operating systems and hardware configurations (e.g.~Windows on ARM,
+Linux on x86, MacOS on M1). The backend service is also developed with
+containerization in mind, making it possible to deploy the software
+securely and avoiding strict dependency on host system configuration.
+
+\hypertarget{signal-processing-and-analysis}{%
+\subsection{Signal processing and
+analysis}\label{signal-processing-and-analysis}}
+
+OpenRFSense uses a variety of signal processing and analysis techniques
+to extract useful information from the captured radio frequency signals.
+This includes techniques such as Fast Fourier Transform
+\protect\hyperlink{ref-heidemanGaussHistoryFast1984}{{[}2{]}} (FFT),
+digital signal processing (DSP), and machine learning algorithms. See
+Section~\ref{sec-signalProcessing} for a more in-depth explanation of
+the data analysis process.
+
+\hypertarget{user-interface-and-management}{%
+\subsection{User interface and
+management}\label{user-interface-and-management}}
+
+OpenRFSense provides a web-based user interface for configuring,
+managing, and visualizing the captured data. The user interface includes
+features such as real-time spectrum displays, signal analysis tools, and
+alerting mechanisms. The system also provides APIs for integration with
+external tools and services.
+
+\hypertarget{backend-architecture}{%
+\section{Backend architecture}\label{backend-architecture}}
+
+The backend service is a monolithic application which combines user
+interface and data management code. It can be broken down into several
+modular components which all depend only on shared configuration in the
+form of a file or environment variables on the host system.
+
+The internal messaging service maintains a constant communication stream
+between the backend and the various nodes deployed by the user. It
+provides a scalable and fault-tolerant solution for message delivery to
+the remote nodes. It is documented in
+Chapter~\ref{sec-serviceMessaging}.
+
+Another critical component is the web-based user interface (UI) which is
+the main interactive mean for the user to communicate with the other
+components inside the backend service. An in-depth explanation, complete
+with other high-level considerations, is contained in
+Chapter~\ref{sec-ui}.
+
+\hypertarget{sec-restApi}{%
+\subsection{REST API}\label{sec-restApi}}
+
+To allow external access to stored data, a REST (REpresentational State
+Transfer, defined in \protect\hyperlink{ref-fieldingArch2000}{{[}3{]}})
+API is provided by the backend. Such a system allows authorized
+applications to query data through a standardized interface. Currently,
+the following data can be fetched from the backend:
+
+\begin{itemize}
+\tightlist
+\item
+  signal measurements taken by a specific node and belonging to a
+  certain campaign
+\item
+  a list of all nodes currently connected to the messaging system
+\item
+  node metrics and system status for a specific node
+\end{itemize}
+
+The API can also actively request actions to be carried out by the
+nodes. To ensure bad actors cannot arbitrarily send command requests to
+the system, all requests which perform an action that can change the
+state of the system require a form of authentication. The currently
+implemented authentication method is Basic HTTP Authentication (a Web
+standard, see \protect\hyperlink{ref-RFC7235}{{[}4{]}}).
+
+\hypertarget{sec-signalStorage}{%
+\subsection{Signal measurements storage}\label{sec-signalStorage}}
+
+Since radio signal data can be dense and structured as large inbound TCP
+packets, a storage layer capable of extremely fast writes to memory is
+needed. The BadgerDB \protect\hyperlink{ref-BadgerDB}{{[}5{]}} key-value
+store was chosen due to the maturity of the software and it being
+natively developed in Golang, providing easier integration into the
+existing backend code. BadgerDB is capable, in optimal conditions
+(sufficient RAM and a modern solid state disk), of writing several
+gigabytes of data per second to disk. In practical testing, BadgerDB has
+proven more than sufficient for handling raw inbound signal data from
+several nodes at a time.
+
+\hypertarget{database-access-layer}{%
+\subsection{Database access layer}\label{database-access-layer}}
+
+A support database is used to store persistent data, which is required
+to survive service outages or is generally better kept for an
+unspecified amount of time. PostgreSQL
+\protect\hyperlink{ref-groupPostgreSQL2023}{{[}6{]}} was chosen mainly
+due to the maturity and notoriety of the project. From the project
+website:
+
+\begin{quote}
+\emph{PostgreSQL is a powerful, open source object-relational database
+system that uses and extends the SQL language combined with many
+features that safely store and scale the most complicated data
+workloads.}
+\end{quote}
+
+PostgreSQL is widely available and easily deployable even using
+container technology. A native Golang implementation of the database
+connection and communication protocol is used internally to store data
+such as past node metrics received through the messaging system, or
+signal measurement campaign data (start date and time, end date and
+time, etc.). Such data is then available for querying through the REST
+API documented above (in Section~\ref{sec-restApi}).
+
+\hypertarget{node-architecture}{%
+\section{Node architecture}\label{node-architecture}}
+
+The node software is developed upon much the same technologies as the
+backend to ease integration between the two and reduce development
+overhead. Being developed to run natively on embedded devices as a
+self-contained application, several software components are needed to
+fullfil all required functions.
+
+The application is available both as a standalone, statically-linked
+executable and a more user-friendly prebuilt system image based on the
+Raspbian OS. The system image comes pre-configured with required system
+components such as:
+
+\begin{itemize}
+\tightlist
+\item
+  a SystemD \protect\hyperlink{ref-Systemd}{{[}7{]}} service which
+  starts the node management software on boot
+\item
+  the OpenRFSense node management application
+\item
+  the external, low-level program which interfaces with the SDR hardware
+  (\texttt{orfs-sensor})
+\item
+  some useful signal decoding software, also part of the project
+\end{itemize}
+
+The following sections describe the main components of the node
+management software.
+
+\hypertarget{system-metrics-collector}{%
+\subsection{System metrics collector}\label{system-metrics-collector}}
+
+A critical component for the node software is the metrics collector.
+This component is responsible for providing a current snapshot of the
+status of both hardware and software of the system, which will then be
+stored by the backend. The metrics message format and message exchange
+is documented more extensively in Section~\ref{sec-metrics}.
+
+\hypertarget{process-manager}{%
+\subsection{Process manager}\label{process-manager}}
+
+The node software relies on an external process for data acquisition and
+delivery. Not being originally developed with integration in mind, such
+a program is managed as a zero-knowledge black box, executed as a child
+process by generating command-line arguments and passing them to the
+program.
+
+\begin{figure}[h!]
+
+{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{index_files/mediabag/2ede55a8c9c0223312f5fe980e0c838aa78c9b6b.pdf}
+
+}
+
+\caption{measurement process flow}
+
+\end{figure}
+
+\hypertarget{user-interface}{%
+\subsection{User interface}\label{user-interface}}
+
+Much like the backend, the node provides users with a web-based UI to
+manage system functionality. Additionally, the UI lets users configure
+and reboot the system without needing an external monitor or peripherals
+for easier system administration of embedded devices. A description of
+the node UI with screenshots is contained in Section~\ref{sec-nodeUi}.
+
+The interface is only accessible on the same network as the node, to
+avoid exposing administration functionality to the public internet.
+Additionally, for thirty minutes after the system is booted, the UI is
+accessible by connecting to the device through a temporary WiFi access
+point if the hardware is capable of creating one such connection.
+
+\bookmarksetup{startatroot}
+
+\hypertarget{sec-serviceMessaging}{%
+\chapter{Service messaging}\label{sec-serviceMessaging}}
+
+In OpenRFSense, NATS messaging \protect\hyperlink{ref-NATS}{{[}8{]}} is
+used to enable communication between the backend and the nodes. NATS
+(Neural Autonomic Transport System) is a lightweight messaging system
+that is commonly used for machine-to-machine (M2M) communication in IoT
+(Internet of Things) applications. A messaging system such as NATS is
+based on message delivery guarantees and optional message retention for
+later delivery. These capabilities ensure service message resiliency
+through high-latency connections and in-flight data loss.
+
+The backend acts as the NATS server and the nodes act as NATS clients
+which connect to the server. When a node is powered on, it connects to
+the NATS server and subscribes to a \enquote{subject}, which is a named
+destination to which messages are published. The node can subscribe to
+one or more subjects depending on its capabilities. Some subjects
+currently being used for service messages are:
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{node.all} for node system metrics (see
+  Section~\ref{sec-metrics})
+\item
+  \texttt{node.all.aggregated} and \texttt{node.all.raw} for
+  backend-to-node signal recording commands (see
+  Section~\ref{sec-commands})
+\item
+  \texttt{node.\$hardware\_id.\$command}, where \texttt{\$hardware\_id}
+  is the node's unique identifier and \texttt{\$command} is a specific
+  action being requested
+\end{itemize}
+
+\hypertarget{sec-metrics}{%
+\section{Node metrics}\label{sec-metrics}}
+
+The backend, when requested through the REST API or the web UI, sends a
+\enquote{status request} message to a specific NATS subject (to which
+all nodes are required to listen on). All nodes then start collecting
+internal metrics (such as CPU usage and temperature, memory usage etc.)
+and respond on the same subject with the collected data, encoded in JSON
+(JavaScript Object Notation) format
+\protect\hyperlink{ref-ecmaECMA404JSONData2017}{{[}9{]}}.
+
+\begin{figure}[h!]
+
+{\centering \includegraphics{index_files/mediabag/c498518269b754f0cb52da425ed2e89a40bb3797.pdf}
+
+}
+
+\caption{\label{fig-metrics}node metrics request flow}
+
+\end{figure}
+
+\hypertarget{metrics-contents}{%
+\subsection{Metrics contents}\label{metrics-contents}}
+
+A metrics object contains useful system data such as:
+
+\begin{itemize}
+\tightlist
+\item
+  the system hostname
+\item
+  a unique hardware ID derived from the motherboard model
+\item
+  the motherboard/hardware model of the system
+\item
+  the system's online time (uptime) in milliseconds since it was powered
+  on
+\end{itemize}
+
+Additionally, a variable-content section is reserved for less crucial
+information. This section is never required nor checked by the backend,
+but its data, if present, is shown to the user through the web UI.
+Currently, such data is provided by small standardized software modules
+(\enquote{providers}), which are called by the node management software
+if present. Some currently implemented providers are:
+
+\begin{itemize}
+\tightlist
+\item
+  node geographical location in GeoJSON
+  \protect\hyperlink{ref-RFC7946}{{[}10{]}} format
+\item
+  filesystem usage
+\item
+  memory (RAM) usage
+\item
+  network connections
+\item
+  current node availability (free, busy, handling errors, etc.)
+\end{itemize}
+
+\hypertarget{message-encoding}{%
+\subsection{Message encoding}\label{message-encoding}}
+
+As stated above, node metrics are encoded in JSON format to be easily
+accessible by external services, since JSON is a well-established
+industry standard data format. An example of the metrics data encoded in
+textual JSON is Listing~\ref{lst-metrics}.
+
+\begin{codelisting}
+
+\caption{example metrics object in JSON format}
+
+\hypertarget{lst-metrics}{%
+\label{lst-metrics}}%
+\begin{Shaded}
+\begin{Highlighting}[numbers=left,,]
+\FunctionTok{\{}
+  \DataTypeTok{"id"}\FunctionTok{:} \StringTok{"kgslnximugwhsfnwbjknwbv"}\FunctionTok{,}
+  \DataTypeTok{"hostname"}\FunctionTok{:} \StringTok{"raspberry"}\FunctionTok{,}
+  \DataTypeTok{"model"}\FunctionTok{:} \StringTok{"Raspberry Pi 3B"}\FunctionTok{,}
+  \DataTypeTok{"uptime"}\FunctionTok{:} \DecValTok{186339250000000}\FunctionTok{,}
+  \DataTypeTok{"providers"}\FunctionTok{:} \OtherTok{[]}
+\FunctionTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\end{codelisting}
+
+\hypertarget{sec-commands}{%
+\section{Commands}\label{sec-commands}}
+
+The backend can also publish messages to node-specific subjects. This
+enables the backend to remotely control the nodes and send configuration
+updates or commands. The messages can be one of two types:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  empty messages sent on a specific NATS subject (\enquote{pings})
+\item
+  JSON-encoded messages containing relevant context for the requested
+  action
+\end{enumerate}
+
+When a node receives a remote command message, it processes the command
+and sends a response message back to the backend. The response message
+can contain any relevant information about the status of the command,
+such as success or failure, and any associated data. Generally, nodes
+send their system metrics as response but it is not a strict
+requirement.
+
+\begin{figure}[h!]
+
+{\centering \includegraphics{index_files/mediabag/594ec6cc8bb7a28e51cf7a27e0d8aa69c49e0602.pdf}
+
+}
+
+\caption{\label{fig-commands}sensor campaign command flow}
+
+\end{figure}
+
+\bookmarksetup{startatroot}
+
+\hypertarget{sec-ui}{%
+\chapter{User interface}\label{sec-ui}}
+
+The user interface plays an essential role in enabling users to interact
+with the system effectively. A well-designed user interface can make it
+easy for users to navigate between pages and perform several complex
+tasks related to node system and data management.
+
+The UI is served to the user as a collection of web pages by the backend
+service. The pages are generated on demand with up-to-date information
+and take advantage of modern web technologies.
+
+\hypertarget{design-principles}{%
+\section{Design principles}\label{design-principles}}
+
+Several design principles guided the development of the user interface,
+mainly:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Consistency: Elements such as fonts, colors, and icons are consistent
+  throughout the interface, making it easier for users to navigate
+  between UI sections and use the system.
+\item
+  Simplicity: The user interface is simple and easy to use. The
+  simplicity principle ensures that the interface is not cluttered with
+  unnecessary elements, making it easy for users to find what they need.
+\item
+  Feedback: The user interface provides users with immediate feedback to
+  let them know that their actions have been registered. This principle
+  ensures that users are not left wondering whether their actions have
+  been successful.
+\item
+  Accessibility: The user interface is designed to be accessible to all
+  users, including those with disabilities. This principle ensures that
+  users with different abilities can use the system without encountering
+  any usability barriers.
+\end{enumerate}
+
+\newpage{}
+
+\hypertarget{interface-components-and-structure}{%
+\section{Interface components and
+structure}\label{interface-components-and-structure}}
+
+The UI is aimed at users with a certain technical background and
+previous knowledge of the system, but it is designed to be easily
+navigated through by any given user.
+
+\begin{figure}[h!]
+
+{\centering \includegraphics{index_files/mediabag/05e1db55b179033dd01d6bbbcb09b1917c1dda84.pdf}
+
+}
+
+\caption{UI hyperlink structure}
+
+\end{figure}
+
+\hypertarget{dashboard}{%
+\subsection{Dashboard}\label{dashboard}}
+
+The dashboard acts as the homepage of the UI. It is the first page
+served by the backend on the root address and is the first interactive
+element the user will be shown on connection to the system.
+
+\begin{figure}[h!]
+
+{\centering \includegraphics[width=0.8\textwidth,height=\textheight]{assets/screenshots/dashboard.pdf}
+
+}
+
+\caption{Dashboard}
+
+\end{figure}
+
+The first element presented by the UI is a table containing useful
+information about all nodes connected to the backend, such as node
+location and unique identifier. Each node can be selected with a
+checkbox to take part in a measurement campaign (configurable through a
+pop-up modal dialog). Every row also contains a link to a page which
+visualizes a node's metrics and location in more detail (see
+Section~\ref{sec-nodeOverview}).
+
+The homepage of the UI provides a map of the world, with the locations
+of all the sensors in the OpenRFSense network indicated by markers.
+Clicking on the markers yields basic information about each node, such
+as its ID and the last time it was active, and a link the node-specific
+overview page.
+
+\hypertarget{sec-nodeOverview}{%
+\subsection{Node overview page}\label{sec-nodeOverview}}
+
+A node-specific overview page is also generated for each node connected
+to the backend and the messaging system. This page generally contains
+all required node metrics returned by a request to the node, as well as
+more detailed node system information if available (see
+Section~\ref{sec-metrics}). The node overview page also contains a map
+but only showing a single marker corresponding to the node being queried
+and centered on the node's location, if provided.
+
+\begin{figure}[h!]
+
+{\centering \includegraphics[width=0.8\textwidth,height=\textheight]{assets/screenshots/node.pdf}
+
+}
+
+\caption{Node overview page}
+
+\end{figure}
+
+A table containing a list of all past and ongoing measurement campaigns
+is also provided to the user, with management controls on each row to
+download the signal data in various formats or delete it from the
+storage. The controls are non-interactive if the campaign is still
+ongoing.
+
+\newpage{}
+
+\hypertarget{api-documentation}{%
+\subsection{API documentation}\label{api-documentation}}
+
+To make the REST API (defined in Section~\ref{sec-restApi}) easily
+accessible to users and external applications, a documentation page is
+automatically generated using Swagger (OpenAPI specification version 2.0
+\protect\hyperlink{ref-OpenAPISpecification2}{{[}11{]}}). The generated
+page contains all the necessary documentation to query data and send
+commands to the backend, complete with examples and request and response
+formats in textual JSON.
+
+\begin{figure}[h!]
+
+{\centering \includegraphics[width=0.8\textwidth,height=\textheight]{assets/screenshots/api-docs.pdf}
+
+}
+
+\caption{API documentation}
+
+\end{figure}
+
+\newpage{}
+
+\hypertarget{sec-nodeUi}{%
+\subsection{Node system interface}\label{sec-nodeUi}}
+
+Each node's local management UI provides a high-level management over
+the host system running the node. As such, it must present important
+information in logical order, starting with connection status (both WiFi
+and physical). On remote devices, this facilitates troubleshooting and
+provides an alternative method of restoring connection to a node.
+
+\begin{figure}[h!]
+
+{\centering \includegraphics[width=0.8\textwidth,height=\textheight]{assets/screenshots/node-ui.png}
+
+}
+
+\caption{Node system management page}
+
+\end{figure}
+
+A simple text editor is also provided for the node management software
+configuration. Each change followed by a click on the \enquote{Save}
+button will write the changes to the configuration file and reboot the
+system.
+
+\newpage{}
+
+\bookmarksetup{startatroot}
+
+\hypertarget{data-collection-and-analysis}{%
+\chapter{Data collection and
+analysis}\label{data-collection-and-analysis}}
+
+Data collection is at the core of the OpenRFSense project and, as such,
+requires some complex and specialized components. Overall, the data
+collection procedure can be better explained as an ordered pipeline,
+which starts from the remote node.
+
+\hypertarget{data-acquisition}{%
+\section{Data acquisition}\label{data-acquisition}}
+
+The node software utilizes a set of low-level hardware APIs to interface
+with the SDR receiver(s) and collect the RF signals. The main data
+collection routine is handled by a customized version of a pre-existing
+Electrosense software, which interfaces with connected SDR devices and
+streams data towards an external destination.
+
+The data is collected in one of two forms:
+
+\begin{itemize}
+\tightlist
+\item
+  raw spectral density ordered by frequency
+\item
+  spectral density averaged over an arbitrary number of seconds using
+  Fast Fourier Transform (FFT)
+\end{itemize}
+
+\hypertarget{sec-signalProcessing}{%
+\section{Signal processing}\label{sec-signalProcessing}}
+
+The signal processing component is responsible for cleaning up the
+collected RF signals and extracting the relevant features for analysis.
+The component utilizes a set of algorithms to filter out noise and
+interference from the collected signals. Once the signals are cleaned
+up, the component extracts relevant features such as the signal
+strength, modulation type, and frequency. At the time of writing, the
+following signal encodings can be preprocessed:
+
+\begin{itemize}
+\tightlist
+\item
+  Aircraft Communications Addressing and Reporting System (ACARS)
+\item
+  LTE, both User Equipment-to-cell and cell-to-User Equipment
+\item
+  Mode S
+  \protect\hyperlink{ref-internationalcivilaviationorganizationManualModeSpecific2004}{{[}12{]}}
+  collision avoidance messages
+\item
+  Aeronautical Information Service (AIS) air traffic information
+\item
+  AM/FM radio
+\end{itemize}
+
+\hypertarget{data-streaming}{%
+\section{Data streaming}\label{data-streaming}}
+
+The processed data is serialized in a JSON-based binary format (Apache
+Avro \protect\hyperlink{ref-ApacheAvroDocumentation}{{[}13{]}}),
+together with extra metadata such as:
+
+\begin{itemize}
+\tightlist
+\item
+  time of recording
+\item
+  node hardware identifier and campaign identifier code
+\item
+  sensor hardware configuration (center frequency, antenna gain,
+  estimated noise floor, etc.)
+\end{itemize}
+
+The encoded packets are then sent over the Internet to the backend
+service through several raw TCP connections per receiver to maximize
+flow. Surprisingly, even low-cost modern SDR receivers tend to output
+large quantities of data (usually in the order of several megabytes per
+second). This requires the usage of clever throughput maximization
+algorithms such as TCP Fast Open
+\protect\hyperlink{ref-radhakrishnanTCPFastOpen2011}{{[}14{]}} and
+\texttt{SO\_REUSEPORT}.
+
+\hypertarget{data-storage}{%
+\section{Data storage}\label{data-storage}}
+
+The cleaned up and feature-extracted data is received by the backend and
+partially deserialized to extract the node hardware identifier and
+campaign identifier code, which are used to derive a unique key for that
+packet to be used in storage. The binary-encoded data is then stored in
+a database embedded in the backend for later analysis. The data is
+written to disk in a structured format that allows for fast querying and
+analysis. The storage software component is explained in more detail in
+Section~\ref{sec-signalStorage}.
+
+\hypertarget{analysis-of-spectrum-data}{%
+\section{Analysis of spectrum data}\label{analysis-of-spectrum-data}}
+
+To analyze the collected spectrum data, several techniques can be
+employed. One approach is to use statistical methods to identify
+patterns or anomalies in the data. For example, signal strength and
+frequency distribution can be analyzed to detect unusual patterns, which
+may indicate the presence of interference sources. Another approach is
+to use machine learning algorithms to automatically classify different
+types of signals based on their frequency, bandwidth, and modulation.
+This can help to identify different types of signals, such as WiFi,
+Bluetooth, or cellular signals, and to detect any new or unknown
+signals.
+
+Overall, the collected spectrum data is a valuable resource for a wide
+range of applications. The different techniques for analyzing the data
+can provide useful insights into the electromagnetic environment, giving
+users easy access to dense and reasonably accurate research samples.
+
+\bookmarksetup{startatroot}
+
+\hypertarget{conclusion-and-future-work}{%
+\chapter{Conclusion and future work}\label{conclusion-and-future-work}}
+
+OpenRFSense was developed as an experimental software suite powered by
+modern software-defined radio technology. The following sections contain
+some closing remarks and reflections about the project and the status of
+the SDR-based data analysis as a whole.
+
+\hypertarget{evaluation-of-system-performance-and-limitations}{%
+\section{Evaluation of system performance and
+limitations}\label{evaluation-of-system-performance-and-limitations}}
+
+As with any project, OpenRFSense has its limitations that must be
+acknowledged. Below are some of the limitations of the project.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Coverage: OpenRFSense relies on users who can install and maintain
+  their own sensors. As a result, there may be regions where the sensor
+  density is low, leading to gaps in the collected data.
+\item
+  Sensor accuracy: The accuracy of the collected data is dependent on
+  the quality of the sensors installed. Low-quality sensors may produce
+  unreliable data that could affect the accuracy of the analysis and
+  interpretation of the collected data.
+\item
+  Signal interference: Interference from other radio sources can tamper
+  with the accuracy of the collected data. For example, electromagnetic
+  radiation from other devices or sources could create a noisy signal
+  that can be challenging to analyze.
+\item
+  Cost: The cost of installing and maintaining the nodes could be a
+  restraining factor, especially in regions where resources are limited.
+\item
+  Security: The sensors collect data from the environment, and ensuring
+  the security and privacy of the collected data is crucial. The project
+  must ensure that the data collected is not misused or accessed by
+  unauthorized individuals.
+\item
+  Data quality: The data collected may not always be of high quality due
+  to a variety of reasons such as environmental conditions, sensor
+  errors, and data transmission errors. Therefore, it is essential to
+  have mechanisms in place to ensure data quality control and filtering.
+\end{enumerate}
+
+\hypertarget{applications-of-the-project}{%
+\section{Applications of the
+project}\label{applications-of-the-project}}
+
+The collected spectrum data can be used for a wide range of
+applications, including radio frequency interference (RFI)
+identification, spectrum occupancy measurements, and wireless network
+planning.
+
+RFI identification is a major application of spectrum data. OpenRFSense
+provides a real-time view of the electromagnetic environment, allowing
+users to detect and locate interference sources. The data can also be
+used for spectrum monitoring, such as measuring the spectrum occupancy
+of various frequencies. This information can be used to identify
+underutilized spectrum bands, which can then be allocated for new
+services or applications.
+
+Another important application of the data is wireless network planning.
+OpenRFSense provides accurate and up-to-date information on the
+electromagnetic environment, allowing users to identify optimal
+locations for wireless access points or base stations. The data can also
+be used to optimize the configuration of said networks, such as
+adjusting the transmission power or selecting the most appropriate
+frequency band.
+
+Hobbyists and researchers have also been able to carry out more complex
+tasks thanks to SDR receivers, such as satellite tracking and image
+reception
+\protect\hyperlink{ref-peraltaSatelliteTelemetryImage2018}{{[}15{]}}.
+This proves SDR-sourced data to be useful even for longer range and
+higher gain spectrum analysis.
+
+\hypertarget{future-directions-for-research-and-development}{%
+\section{Future directions for research and
+development}\label{future-directions-for-research-and-development}}
+
+Being released as open-source software, OpenRFSense is not intended to
+be a finished, industrial-grade product. Some future areas in which the
+project could be improved or may need additional research are the
+following.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Integration with other sensor networks: OpenRFSense can be integrated
+  with other sensor networks, such as those monitoring air quality,
+  water quality, and weather. Integration with these networks can
+  provide a more comprehensive picture of the environment and the impact
+  of electromagnetic radiation on it.
+\item
+  Machine learning and AI: OpenRFSense can be enhanced with machine
+  learning and artificial intelligence (AI) algorithms to improve the
+  accuracy and speed of data analysis. These algorithms can help
+  identify patterns and anomalies in the data and assist in making
+  predictions and recommendations based on the data.
+\item
+  Real-time monitoring: The current version of OpenRFSense only provides
+  playback of recorded spectrum data. However, further development can
+  be done to improve the latency and accuracy of the system, at the
+  point of providing users with real-time signal visualization. This can
+  require the use of more advanced sensors and improved data
+  transmission technologies.
+\item
+  Visualization and data analysis tools: OpenRFSense generates a large
+  amount of data, and tools are needed to help users visualize and
+  analyze the data. This can involve the development of new
+  visualization techniques, such as heat maps and trend analysis, as
+  well as ad-hoc data mining tools and other task-specific analysis
+  tools.
+\item
+  Standardization and data sharing: OpenRFSense can benefit from
+  standardization of data collection and sharing protocols, such as a
+  universal format for spectrum data storage. This can help ensure that
+  data collected by different sensors and networks can be easily shared
+  and combined to provide a more comprehensive picture of the
+  environment.
+\end{enumerate}
+
+\appendix
+
+\titleformat{\chapter}{\normalfont\Huge\bfseries}{Appendix \thechapter}{1em}{}
+
+\bookmarksetup{startatroot}
+
+\hypertarget{code-structure}{%
+\chapter{Code structure}\label{code-structure}}
+
+All the code for the OpenRFSense project is hosted on Github, a free Git
+repository hosting service with additional code and community management
+tools. At the time of writing, the various components are placed in the
+following repositories under the
+\href{https://github.com/openrfsense}{OpenRFSense organization}:
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{backend}: source code and tooling for the backend service
+\item
+  \texttt{node}: source code and tooling for the node management
+  software
+\item
+  \texttt{orfs-sensor}: source code for the signal recording software
+\item
+  \texttt{image}: various scripts and tooling to generate the
+  pre-configured system image for Raspberry Pi boards
+\item
+  \texttt{openrfsense.github.io}: technical documentation for the
+  project (see Appendix~\ref{sec-techDoc})
+\item
+  \texttt{common}: shared code which would otherwise be duplicated in
+  both node and backend
+\end{itemize}
+
+\bookmarksetup{startatroot}
+
+\hypertarget{project-branding}{%
+\chapter{Project branding}\label{project-branding}}
+
+Special care was put behind giving an identity to the OpenRFSense
+project through graphic design. A simple but meaningful logo contains
+the abbreviated project name and a round symbology reminiscent of
+WiFi-associated commercial products.
+
+\begin{figure}[h!]
+
+{\centering \includegraphics[width=0.6\textwidth,height=\textheight]{index_files/mediabag/assets/logos/openrf.pdf}
+
+}
+
+\caption{Official OpenRFSense logo}
+
+\end{figure}
+
+The color palette has enough contrast to be accessible but maintains at
+least one saturated color.
+
+\begin{figure}[h!]
+
+{\centering \includegraphics{index_files/mediabag/assets/palette.pdf}
+
+}
+
+\caption{Color palette}
+
+\end{figure}
+
+\bookmarksetup{startatroot}
+
+\hypertarget{sec-techDoc}{%
+\chapter{Technical documentation}\label{sec-techDoc}}
+
+All software components for the OpenRFSense project contain
+self-documenting code with numerous comments and additional
+language-specific documentation tooling (\texttt{godoc}). Moreover,
+additional user-oriented technical documentation has been written and is
+deployed automatically on Github's static file hosting service (Github
+Pages).
+
+The documentation is written in Markdown format and is rendered to a
+static website using the Jekyll program. It includes code blocks with
+ready-to-use examples to prepare deployments and configure the services
+before starting the system, together with overviews of the various
+components. All pages also feature a search widget which facilitates
+navigation through the text contents.
+
+\begin{figure}[h!]
+
+{\centering \includegraphics[width=0.8\textwidth,height=\textheight]{assets/screenshots/docs.pdf}
+
+}
+
+\caption{OpenRFSense documentation}
+
+\end{figure}
+
+\bookmarksetup{startatroot}
+
+\hypertarget{bibliography}{%
+\chapter*{Bibliography}\label{bibliography}}
+\addcontentsline{toc}{chapter}{Bibliography}
+
+\markboth{Bibliography}{Bibliography}
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{0}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-GoProgrammingLanguage}{}}%
+\CSLLeftMargin{{[}1{]} }%
+\CSLRightInline{{``The {Go Programming Language}.''} {[}Online{]}.
+Available: \url{https://go.dev/}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-heidemanGaussHistoryFast1984}{}}%
+\CSLLeftMargin{{[}2{]} }%
+\CSLRightInline{M. Heideman, D. Johnson, and C. Burrus, {``Gauss and the
+history of the fast fourier transform,''} \emph{IEEE ASSP Mag.}, vol. 1,
+no. 4, pp. 14--21, Oct. 1984, doi:
+\href{https://doi.org/10.1109/MASSP.1984.1162257}{10.1109/MASSP.1984.1162257}.
+{[}Online{]}. Available:
+\url{http://ieeexplore.ieee.org/document/1162257/}. {[}Accessed: Feb.
+27, 2023{]}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-fieldingArch2000}{}}%
+\CSLLeftMargin{{[}3{]} }%
+\CSLRightInline{R. T. Fielding and R. N. Taylor, {``Architectural styles
+and the design of network-based software architectures,''} {University
+of California, Irvine}, 2000. }
+
+\leavevmode\vadjust pre{\hypertarget{ref-RFC7235}{}}%
+\CSLLeftMargin{{[}4{]} }%
+\CSLRightInline{R. Fielding and J. Reschke, {``Hypertext transfer
+protocol ({HTTP}/1.1): {Authentication},''} {RFC Editor / RFC Editor};
+Internet Requests for Comments, RFC 7235, Jun. 2014 {[}Online{]}.
+Available: \url{http://www.rfc-editor.org/rfc/rfc7235.txt}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-BadgerDB}{}}%
+\CSLLeftMargin{{[}5{]} }%
+\CSLRightInline{{``{BadgerDB}.''} {[}Online{]}. Available:
+\url{https://dgraph.io/docs/badger}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-groupPostgreSQL2023}{}}%
+\CSLLeftMargin{{[}6{]} }%
+\CSLRightInline{P. G. D. Group, {``{PostgreSQL},''} Feb. 25, 2023.
+{[}Online{]}. Available: \url{https://www.postgresql.org/}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-Systemd}{}}%
+\CSLLeftMargin{{[}7{]} }%
+\CSLRightInline{{``Systemd.''} {[}Online{]}. Available:
+\url{https://www.freedesktop.org/wiki/Software/systemd/}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-NATS}{}}%
+\CSLLeftMargin{{[}8{]} }%
+\CSLRightInline{{``{NATS}.''} {[}Online{]}. Available:
+\url{https://nats.io/about}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-ecmaECMA404JSONData2017}{}}%
+\CSLLeftMargin{{[}9{]} }%
+\CSLRightInline{ECMA, \emph{{ECMA-404}: {The JSON} data interchange
+syntax}. {Geneva, Switzerland}: {ECMA (European Association for
+Standardizing Information and Communication Systems)}, 2017
+{[}Online{]}. Available:
+\url{https://www.ecma-international.org/publications-and-standards/standards/ecma-404/}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-RFC7946}{}}%
+\CSLLeftMargin{{[}10{]} }%
+\CSLRightInline{H. Butler, M. Daly, A. Doyle, S. Gillies, S. Hagen, and
+T. Schaub, {``The {GeoJSON} format,''} {RFC Editor / RFC Editor};
+Internet Requests for Comments, RFC 7946, Aug. 2016. }
+
+\leavevmode\vadjust pre{\hypertarget{ref-OpenAPISpecification2}{}}%
+\CSLLeftMargin{{[}11{]} }%
+\CSLRightInline{{``{OpenAPI Specification} - {Version} 2.0 \textbar{}
+{Swagger}.''} {[}Online{]}. Available:
+\url{https://swagger.io/specification/v2/}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-internationalcivilaviationorganizationManualModeSpecific2004}{}}%
+\CSLLeftMargin{{[}12{]} }%
+\CSLRightInline{I. C. A. Organization, Ed., \emph{Manual on mode {S}
+specific services}, 2nd. ed. {Montreal}: {ICAO}, 2004. }
+
+\leavevmode\vadjust pre{\hypertarget{ref-ApacheAvroDocumentation}{}}%
+\CSLLeftMargin{{[}13{]} }%
+\CSLRightInline{{``Apache {Avro Documentation}.''} {[}Online{]}.
+Available: \url{https://avro.apache.org/docs/}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-radhakrishnanTCPFastOpen2011}{}}%
+\CSLLeftMargin{{[}14{]} }%
+\CSLRightInline{S. Radhakrishnan, Y. Cheng, J. Chu, A. Jain, and B.
+Raghavan, {``{TCP} fast open,''} in \emph{Proceedings of the {Seventh
+COnference} on emerging {Networking EXperiments} and {Technologies}},
+Dec. 2011, pp. 1--12, doi:
+\href{https://doi.org/10.1145/2079296.2079317}{10.1145/2079296.2079317}
+{[}Online{]}. Available:
+\url{https://dl.acm.org/doi/10.1145/2079296.2079317}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-peraltaSatelliteTelemetryImage2018}{}}%
+\CSLLeftMargin{{[}15{]} }%
+\CSLRightInline{D. J. M. Peralta, D. S. D. Santos, A. Tikami, W. A. D.
+Santos, and E. W. R. Pereira, {``Satellite {Telemetry} and {Image
+Reception} with {Software Defined Radio Applied} to {Space Outreach
+Projects} in {Brazil},''} \emph{An. Acad. Bras. Ciênc.}, vol. 90, no. 3,
+pp. 3175--3184, Sep. 2018, doi:
+\href{https://doi.org/10.1590/0001-3765201820170955}{10.1590/0001-3765201820170955}.
+{[}Online{]}. Available:
+\url{http://www.scielo.br/scielo.php?script=sci_arttext\&pid=S0001-37652018000603175\&tlng=en}}
+
+\end{CSLReferences}
+\endgroup
+\clearpage
+
+
+\backmatter
+
+\clearpage
+
+\end{document}

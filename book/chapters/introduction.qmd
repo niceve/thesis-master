@@ -1,5 +1,7 @@
 # Introduction
 
+![SchemaExtract](/assets/SchemaExtract2.gif){width=80%}
+
 ## Background
 Truly understanding customers is key to a successful business. Companies increasingly leverage data analytics to uncover insights into their customers' needs, preferences, and socio-demographic profiles. This information is essential for enhancing user experiences, differentiating from competitors, and creating products that satisfy market demands. Moreover, understanding customers improves strategic planning by facilitating informed decisions about market positioning, pricing, and promotional strategies. By aligning marketing strategies with consumer needs, businesses can achieve more successful and impactful outcomes. 
 

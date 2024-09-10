@@ -1,0 +1,29 @@
+{
+  "index.qmd": {
+    "index.html": "76ea486a"
+  },
+  "chapters/introduction.qmd": {
+    "introduction.html": "7fd5e0a3"
+  },
+  "chapters/system-architecture.qmd": {
+    "system-architecture.html": "1361b809"
+  },
+  "chapters/service-messaging.qmd": {
+    "service-messaging.html": "075b3393"
+  },
+  "chapters/user-interface.qmd": {
+    "user-interface.html": "01963f44"
+  },
+  "chapters/data-collection-and-analysis.qmd": {
+    "data-collection-and-analysis.html": "34f44e74"
+  },
+  "chapters/conclusion-and-future-work.qmd": {
+    "conclusion-and-future-work.html": "cf282f93"
+  },
+  "chapters/appendices.qmd": {
+    "appendices.html": "cc42b201"
+  },
+  "chapters/bibliography.qmd": {
+    "bibliography.html": "d81e5e8a"
+  }
+}
